@@ -28,7 +28,7 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(23, 37, 84, 0.9),
+    rgba(23, 37, 84, 0.9)30%,
     rgba(88, 28, 135, 0.8)
   );
 }
@@ -52,11 +52,12 @@
 .hero-title {
   margin-bottom: 1.5rem;
   color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 /* Subtitle */
 .hero-subtitle {
-
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   color: #f3f4f6;
   max-width: 650px;
   margin: 0 auto 2rem;
@@ -71,6 +72,7 @@
   align-items: center;
   font-size: 1.125rem;
   margin-bottom: 2rem;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.5);
 }
 
 .hero-info-item {
@@ -93,11 +95,12 @@
 .hero-button {
   display: inline-block;
   background: white;
-  color: #1e3a8a;
+  color: #192b5c;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   text-decoration: none;
   transition: background 0.2s ease;
+  font-weight: 600;
 }
 
 .hero-button:hover {
