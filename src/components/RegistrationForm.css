@@ -1,7 +1,8 @@
 /* Section background */
 .reg-section {
   padding: 5rem 0;
-  background: linear-gradient(to bottom right, #eff6ff, #f3e8ff);
+  background: linear-gradient(to bottom right, #e4f0ff, #cbcdf5);
+  background: rgb(237, 238, 243);
 }
 
 /* Container */
@@ -37,6 +38,7 @@
   padding: 2rem;
   border-radius: 0.75rem;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  
 }
 
 .reg-grid {
@@ -44,7 +46,9 @@
   grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
+  margin-right: 1rem;
 }
+
 
 @media (min-width: 640px) {
   .reg-grid {
@@ -54,6 +58,7 @@
 
 .reg-field {
   margin-bottom: 1.5rem;
+  margin-right: 1rem;
 }
 
 .reg-label {
@@ -64,13 +69,16 @@
 }
 
 .reg-input {
-  width: 100%;
+  width: 100%;;
   padding: 0.75rem 1rem;
+  padding-right: 0rem;
   border-radius: 0.5rem;
   border: 1px solid #d1d5db;
   font-size: 1rem;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: rgba(0,0,0,0.05);
+  color: rgb(44, 44, 44);
 }
 
 .reg-input:focus {
@@ -157,4 +165,10 @@
 
 .reg-success-text {
   color: #374151;
+}
+
+
+.reg-section input {
+
+ 
 }

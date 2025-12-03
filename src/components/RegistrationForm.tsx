@@ -74,15 +74,15 @@ export function RegistrationForm() {
         <div className="reg-wrapper">
 
           <div className="reg-header">
-            <h2 className="reg-title">Register for the Event</h2>
-            <p className="reg-subtitle">Secure your spot at the PLM Innovation Summit 2025. Limited seats available!</p>
+            <h2 className="reg-title">Zarejestruj się na wydarzenie</h2>
+            <p className="reg-subtitle">Zapewnij sobie miejsce. Liczba miejsc jest ograniczona!</p>
           </div>
 
           <form onSubmit={handleSubmit} className="reg-form">
             
             <div className="reg-grid">
               <div>
-                <label htmlFor="firstName" className="reg-label">First Name *</label>
+                <label htmlFor="firstName" className="reg-label">Imię *</label>
                 <input
                   type="text"
                   id="firstName"
@@ -95,7 +95,7 @@ export function RegistrationForm() {
               </div>
 
               <div>
-                <label htmlFor="lastName" className="reg-label">Last Name *</label>
+                <label htmlFor="lastName" className="reg-label">Nazwisko *</label>
                 <input
                   type="text"
                   id="lastName"
