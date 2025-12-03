@@ -1,0 +1,121 @@
+/* SECTION */
+.partners-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* HEADER */
+.partners-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.partners-header h2 {
+  margin-bottom: 1rem;
+}
+
+.partners-header p {
+  color: #4b5563; /* gray-600 */
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+/* GRID */
+.partners-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* PARTNER CARD */
+.partner-card {
+  background: linear-gradient(to bottom right, #f9fafb, #ffffff);
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: 0.25s;
+}
+
+.partner-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.partner-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.partner-desc {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* EXPERTISE TAG */
+.partner-expertise {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2563eb;
+  font-size: 0.875rem;
+}
+
+.expertise-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* WHY PARTNER */
+.partners-why {
+  margin-top: 4rem;
+  background: #eff6ff; /* blue-50 */
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.why-item {
+  text-align: center;
+}
+
+.why-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 0.75rem;
+  color: #2563eb;
+}
+
+.why-item p {
+  font-size: 0.875rem;
+  color: #4b5563;
+}

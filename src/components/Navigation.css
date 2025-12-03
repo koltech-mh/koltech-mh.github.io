@@ -1,0 +1,94 @@
+/* Navigation Wrapper */
+.nav {
+  background: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Centering container */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Inner layout */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo */
+.nav-logo h3 {
+  color: black;
+  margin: 0;
+}
+
+/* Desktop Nav Links */
+.nav-links {
+  display: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #374151; /* gray-700 */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb; /* blue-600 */
+}
+
+/* Mobile toggle button */
+.nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  color: #374151;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-toggle:hover {
+  color: #2563eb;
+}
+
+/* Mobile menu */
+.nav-mobile {
+  border-top: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.nav-mobile-link {
+  display: block;
+  padding: 0.5rem 0;
+  color: #374151;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-mobile-link:hover {
+  color: #2563eb;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+}

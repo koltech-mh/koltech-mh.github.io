@@ -1,0 +1,119 @@
+/* Main hero container */
+.hero {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background wrapper */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Background image if used */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay gradient */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(23, 37, 84, 0.9),
+    rgba(88, 28, 135, 0.8)
+  );
+}
+
+/* Content wrapper */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Title */
+.hero-title {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+/* Subtitle */
+.hero-subtitle {
+
+  color: #f3f4f6;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+}
+
+/* Info row (date + location) */
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.hero-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Divider (only visible on desktop) */
+.hero-divider {
+  display: none;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Button */
+.hero-button {
+  display: inline-block;
+  background: white;
+  color: #1e3a8a;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.hero-button:hover {
+  background: #f3f4f6;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .hero-info {
+    flex-direction: row;
+  }
+
+  .hero-divider {
+    display: block;
+    width: 1px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
