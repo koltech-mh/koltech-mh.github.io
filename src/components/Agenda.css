@@ -57,9 +57,10 @@
 }
 .agenda-card-break .agenda-item-title{
   color: rgba(0,0,0,0.61);
-  font-style: italic;
+
   text-align: center;
 }
+
 
 /* Inner Layout */
 .agenda-card-inner {
@@ -99,8 +100,15 @@
   margin-bottom: 0.5rem;
 }
 
+
 .agenda-description {
-  color: #4b5563; /* gray-600 */
+  color: #4a4b4d; /* gray-600 */
+  display: none;
+
+}
+
+.agenda-card:hover .agenda-description {
+  display: block;
   margin-bottom: 0.5rem;
 }
 
