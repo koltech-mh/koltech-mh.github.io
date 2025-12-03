@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./ImageFadeCarousel.css"; // We'll add styles here
+import { useState, useEffect } from "react";
+import "./ImageFadeCarousel.css";
 
 const images = [
   "https://lh3.googleusercontent.com/p/AF1QipMioeeQKzmKagGRVyEnj0clFD2Qc-8xKC1DBMz3=s680-w680-h510",
