@@ -1,5 +1,5 @@
 //import { Building2, Award, Globe } from 'lucide-react';
-import { Award } from 'lucide-react';
+import { Award, Handshake } from 'lucide-react';
 import "./Partners.css";
 
 interface Partner {
@@ -54,10 +54,7 @@ export function Partners() {
       <div className="partners-container">
 
         <div className="partners-header">
-          <h2>Partnerzy</h2>
-          <p>
-            Współpracujemy z wiodącymi firmami technologicznymi, aby dostarczyć kompleksowe rozwiązania PLM i cyfrowej transformacji.
-          </p>
+          <h2><Handshake/> Partnerzy</h2>
         </div>
 
         <div className="partners-grid">
