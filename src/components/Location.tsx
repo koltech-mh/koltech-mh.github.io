@@ -52,7 +52,7 @@ export function Location() {
               rel="noopener noreferrer"
               className="directions-btn"
             >
-              Wskarz Drogę
+              Wskaż Drogę
             </a>
 
           </div>
