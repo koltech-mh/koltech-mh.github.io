@@ -1,4 +1,4 @@
-import { Lightbulb, Users, TrendingUp } from 'lucide-react';
+//import { Lightbulb, Users, TrendingUp } from 'lucide-react';
 import "./About.css";
 
 export function About() {

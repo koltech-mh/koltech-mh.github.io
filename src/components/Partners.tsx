@@ -1,4 +1,5 @@
-import { Building2, Award, Globe } from 'lucide-react';
+//import { Building2, Award, Globe } from 'lucide-react';
+import { Award } from 'lucide-react';
 import "./Partners.css";
 
 interface Partner {
