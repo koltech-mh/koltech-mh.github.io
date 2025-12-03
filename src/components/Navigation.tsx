@@ -7,6 +7,7 @@ export function Navigation() {
   const navLinks = [
     { name: 'O Wydarzeniu', href: '#about' },
     { name: 'Agenda', href: '#agenda' },
+    { name: 'Lokacja', href: '#location' },
     { name: 'Partnerzy', href: '#partners' },
     { name: 'Rejestracja', href: '#registration' }
   ];

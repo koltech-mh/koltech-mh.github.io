@@ -5,17 +5,19 @@ import { Agenda } from './components/Agenda.tsx';
 import { Partners } from './components/Partners.tsx';
 import { RegistrationForm } from './components/RegistrationForm.tsx';
 import { Footer } from './components/Footer.tsx';
+import { Location } from './components/Location.tsx';
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div>
       <Navigation />
       
       {/* Add padding to account for fixed navigation */}
-      <div className="pt-16">
+      <div>
         <Hero />
         <About />
         <Agenda />
+        <Location/>
         <Partners />
         <RegistrationForm />
         <Footer />
