@@ -4,101 +4,71 @@ import "./Partners.css";
 
 interface Partner {
   name: string;
+  logo: string;
   description: string;
-  expertise: string;
-  icon: string;
+  expertise?: string;
+  link?: string;
 }
 
 const partners: Partner[] = [
   {
+    name: "FANUC",
+    logo: "../src/assets/img/logo/partners/fanuc_logo.png",
+    description: "Lider automatyzacji przemysłowej. Specjalizuje się w produkcji robotów przemysłowych, systemów CNC oraz technologii automatyzujących procesy produkcyjne.",
+    expertise: "Robotyka Przemysłowa",
+    link: "https://www.fanuc.eu/pl/pl",
+  },
+  {
+    name: "ZAPAMET",
+    logo: "../src/assets/img/logo/partners/zapamet_logo.png",
+    description: "Specjalizuje się w automatyzacji produkcji, robotyce przemysłowej, obróbce metali i produkcji części metalowych.",
+    expertise: "Spawalnictwo, Automatyzacja i Robotyka Przemysłowa",
+    link: "https://www.zapamet.pl/",
+  },
+  {
     name: "Dassault Systèmes",
-    description: "Global leader in 3D design, 3D digital mock-up, and PLM solutions. Provider of the 3DEXPERIENCE platform that empowers businesses to innovate sustainably.",
-    expertise: "PLM Platform & Strategy",
-    icon: "🏢"
+    logo: "../src/assets/img/logo/partners/ds_logo_blue.png",
+    description: "Światowy lider w dziedzinie projektowania 3D, cyfrowych makiet 3D i rozwiązań PLM. Dostawca platformy 3DEXPERIENCE, która umożliwia firmom zrównoważone innowacje.",
+    expertise: "Platforma PLM",
+    link: "https://www.3ds.com/",
   },
-  {
-    name: "CATIA",
-    description: "World-leading solution for product design and innovation. Enables the creation of 3D parts and assemblies with powerful modeling capabilities.",
-    expertise: "3D Design & Engineering",
-    icon: "✏️"
-  },
-  {
-    name: "SIMULIA",
-    description: "Provides realistic simulation solutions that enable users to explore and optimize product performance with computational fluid dynamics and structural analysis.",
-    expertise: "Simulation & Analysis",
-    icon: "🔬"
-  },
-  {
-    name: "DELMIA",
-    description: "Delivers digital manufacturing and operations solutions that help companies plan, produce, and service their products with virtual production simulation.",
-    expertise: "Manufacturing Excellence",
-    icon: "🏭"
-  },
-  {
-    name: "ENOVIA",
-    description: "Collaborative innovation platform that enables global teams to collaboratively define, build, and manage products throughout the entire lifecycle.",
-    expertise: "Collaboration & Data Management",
-    icon: "🤝"
-  },
-  {
-    name: "NETVIBES",
-    description: "Dashboard intelligence platform that aggregates data from multiple sources to provide real-time business insights and analytics.",
-    expertise: "Business Intelligence",
-    icon: "📊"
-  }
 ];
 
 export function Partners() {
   return (
-    <section className="partners-section" id="partners">
-      <div className="partners-container">
+<section className="partners-section" id="partners">
+  <div className="partners-container">
 
-        <div className="partners-header">
-          <h2><Handshake/> Partnerzy</h2>
-        </div>
+    <div className="partners-header">
+      <h2><Handshake /> Partnerzy</h2>
+    </div>
 
-        <div className="partners-grid">
-          {partners.map((partner, index) => (
-            <div key={index} className="partner-card">
-              <div className="partner-icon">{partner.icon}</div>
-              <h3>{partner.name}</h3>
-
-              <p className="partner-desc">{partner.description}</p>
-
-              <div className="partner-expertise">
-                <Award className="expertise-icon" />
-                <span>{partner.expertise}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-          {/* 
-        <div className="partners-why">
-          <h3>Why Partner With Us?</h3>
-
-          <div className="why-grid">
-            <div className="why-item">
-              <Building2 className="why-icon" />
-              <h4>Industry Leadership</h4>
-              <p>Work with recognized leaders in PLM and digital transformation</p>
-            </div>
-
-            <div className="why-item">
-              <Award className="why-icon" />
-              <h4>Proven Success</h4>
-              <p>Benefit from decades of experience and successful implementations</p>
-            </div>
-
-            <div className="why-item">
-              <Globe className="why-icon" />
-              <h4>Global Reach</h4>
-              <p>Access worldwide support and resources for your projects</p>
-            </div>
+    <div className="partners-grid">
+      {partners.map((partner, index) => (
+        <div key={index} className="partner-card" onClick={()=>{partner.link&&window.open(partner.link, "_blank");}}>
+          <div className="partner-logo-wrapper">
+            <img 
+              src={partner.logo} 
+              alt={`${partner.name} logo`} 
+              className="partner-logo" 
+            />
           </div>
+
+          {/*<h3>{partner.name}</h3>*/}
+
+          <p className="partner-desc">{partner.description}</p>
+
+          {partner.expertise && 
+          <div className="partner-expertise">
+            <Award className="expertise-icon" />
+            <span>{partner.expertise}</span>
+          </div>
+          }
         </div>
-            */}
-      </div>
-    </section>
+      ))}
+    </div>
+
+  </div>
+</section>
   );
 }

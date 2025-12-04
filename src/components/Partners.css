@@ -51,6 +51,7 @@
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: 0.25s;
+  cursor: pointer;
 }
 
 .partner-card:hover {
@@ -81,6 +82,14 @@
 .expertise-icon {
   width: 18px;
   height: 18px;
+}
+
+.partner-logo-wrapper {
+  width: 15rem;
+}
+.partner-logo-wrapper img{
+  width: 100%;
+  height: auto;
 }
 
 /* WHY PARTNER */
