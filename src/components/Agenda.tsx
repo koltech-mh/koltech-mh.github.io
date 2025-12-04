@@ -1,4 +1,4 @@
-import { Clock, List } from "lucide-react";
+import { Clock } from "lucide-react";
 import "./Agenda.css";
 
 interface AgendaItem {
@@ -35,7 +35,7 @@ export function Agenda() {
       <div className="agenda-container">
         <div className="agenda-header">
           
-          <h2 className="agenda-title"><List/> Agenda</h2>
+          <h2 className="agenda-title"><Clock/> Agenda</h2>
           <p className="agenda-subtitle">
             
           </p>
@@ -49,7 +49,7 @@ export function Agenda() {
                   
                   {/* Time */}
                   <div className="agenda-time">
-                    <Clock className="icon" />
+                    {/*<Clock className="icon" />*/}
                     <span>{item.time}</span>
                   </div>
 
@@ -60,7 +60,7 @@ export function Agenda() {
 
 
                   </div>
-                  
+
                   {/* Speaker */}
                   {item.speaker && item.speaker.length > 0 && (
                     <div className="agenda-speakers">
