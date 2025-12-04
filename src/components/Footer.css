@@ -1,6 +1,6 @@
 /* FOOTER */
 .footer {
-  background: #111827; /* gray-900 */
+  background: #121316; /* gray-900 */
   color: white;
   padding: 3rem 0;
 }
@@ -17,6 +17,10 @@
   display: grid;
   gap: 2rem;
   margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 @media (min-width: 768px) {
@@ -35,24 +39,29 @@
 .footer-contact-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1em;
+  flex-direction: row;
+  gap: 2em;
 }
 
 .footer-contact-item {
   display: flex;
   gap: 0.75rem;
   align-items: flex-start;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-icon {
+  display: inline-block;
   width: 20px;
   height: 20px;
-  margin-top: 3px;
-  flex-shrink: 0;
 }
 
 .footer-text {
   color: #d1d5db; /* gray-300 */
+  margin: 0;
+  padding: 0;
 }
 
 /* EVENT INFO LIST */
@@ -84,13 +93,23 @@
   align-items: center;
   transition: 0.2s ease;
 }
-
+.footer-social-btn{
+  color: white;
+}
 .footer-social-btn.linkedin:hover {
   background: #2563eb; /* blue-600 */
 }
-
 .footer-social-btn.twitter:hover {
   background: #60a5fa; /* blue-400 */
+}
+.footer-social-btn.facebook:hover {
+  background: #0760F2; /* blue-600 */
+}
+.footer-social-btn.instagram:hover {
+  background: linear-gradient(to right,#833ab4,#fd1d1d,#fcb045);
+}
+.footer-social-btn.youtube:hover {
+  background: #FF0033; /* blue-400 */
 }
 
 .footer-social-icon {
@@ -106,9 +125,9 @@
 
 /* BOTTOM */
 .footer-bottom {
-  border-top: 1px solid #1f2937; /* gray-800 */
+  border-top: 1px solid #6b6b6b; /* gray-800 */
   padding-top: 2rem;
   text-align: center;
-  color: #9ca3af;
+  color: #a3a3a3;
   font-size: 0.875rem;
 }
