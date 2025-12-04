@@ -15,7 +15,7 @@
 .about-grid {
   display: grid;
   gap: 3rem;
-  align-items: center;
+  align-items: start;
 }
 
 @media (min-width: 768px) {
@@ -48,51 +48,7 @@
   }
 }
 
-/* INDIVIDUAL FEATURE */
-.about-feature {
-  text-align: center;
-}
 
-.about-feature-title {
-  margin-bottom: 0.5rem;
-}
-
-.about-feature-desc {
-  color: #6b7280; /* gray-600 */
-  font-size: 0.9rem;
-}
-
-/* ICON CIRCLE */
-.about-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  margin: 0 auto 0.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-}
-
-/* COLOR VARIANTS */
-.bg-blue {
-  background: #dbeafe; /* blue-100 */
-  color: #2563eb; /* blue-600 */
-}
-
-.bg-purple {
-  background: #f3e8ff;
-  color: #9333ea;
-}
-
-.bg-green {
-  background: #dcfce7;
-  color: #16a34a;
-}
 
 /* IMAGE (if used) */
 .about-image-wrapper {

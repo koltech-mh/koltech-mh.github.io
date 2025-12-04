@@ -3,6 +3,12 @@ import "./About.css";
 import ImageFadeCarousel from "./ImageFadeCarousel.tsx";
 
 export function About() {
+  
+  const carouselImages = [
+    "https://lh3.googleusercontent.com/p/AF1QipMioeeQKzmKagGRVyEnj0clFD2Qc-8xKC1DBMz3=s680-w680-h510",
+    "https://d16ohktstcjvly.cloudfront.net/image/513891251684/image_o8jat0e2ch6undk9vt2dsi286f/-FJPG",
+  ];
+
   return (
     <section className="about-section" id="about">
       <div className="about-container">
@@ -26,47 +32,12 @@ export function About() {
               • Demo Live zrobotyzowanych procesów regeneracji form metodą napawania<br />
               • Networking z ekspertami branży automatyzacji<br />
             </p>
-            {/* 
-            <div className="about-features-grid">
 
-              <div className="about-feature">
-                <div className="about-icon bg-blue">
-                  <Lightbulb className="icon" />
-                </div>
-                <h3 className="about-feature-title">Innovation</h3>
-                <p className="about-feature-desc">Latest PLM trends & technologies</p>
-              </div>
-
-              <div className="about-feature">
-                <div className="about-icon bg-purple">
-                  <Users className="icon" />
-                </div>
-                <h3 className="about-feature-title">Networking</h3>
-                <p className="about-feature-desc">Connect with industry experts</p>
-              </div>
-
-              <div className="about-feature">
-                <div className="about-icon bg-green">
-                  <TrendingUp className="icon" />
-                </div>
-                <h3 className="about-feature-title">Growth</h3>
-                <p className="about-feature-desc">Accelerate business success</p>
-              </div>
-
-            </div>
-                */}
           </div>
-            
-          <ImageFadeCarousel/>
-          {/* RIGHT COLUMN 
-          <div className="about-image-wrapper">   
-            <img 
-              src="https://lh3.googleusercontent.com/p/AF1QipMioeeQKzmKagGRVyEnj0clFD2Qc-8xKC1DBMz3=s680-w680-h510"
-              className="about-image"
-              alt="fanuc"
-            />
-          </div>
-          */}
+
+          {/* RIGHT COLUMN */}
+          <ImageFadeCarousel />
+
         </div>
       </div>
     </section>

@@ -1,25 +1,49 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import "./ImageFadeCarousel.css";
 
-const images = [
-  "https://lh3.googleusercontent.com/p/AF1QipMioeeQKzmKagGRVyEnj0clFD2Qc-8xKC1DBMz3=s680-w680-h510",
-  "https://d16ohktstcjvly.cloudfront.net/image/513891251684/image_o8jat0e2ch6undk9vt2dsi286f/-FJPG",
-];
-
-const ImageFadeCarousel = () => {
+interface Props {
+  images?: string[];
+  onlyPropImages?: boolean;
+  interval?: number;
+}
+// You can set images directly via props or let the component load all images from the folder.
+const ImageFadeCarousel: React.FC<Props> = ({ images = [], onlyPropImages = false, interval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 3 seconds
+  // import all images from the specified folder
+  const folderImages = useMemo(() => {
+    // Skip loading if onlyPropImages is true and prop images are provided 
+    if (onlyPropImages = true && images.length > 0) return []; 
 
-    return () => clearInterval(interval);
-  }, []);
+    const imported = import.meta.glob(
+      "../assets/about_img_carousel/*.{jpg,jpeg,png,webp}",//set path to your folder
+      { eager: true }
+    ) as Record<string, { default: string }>;
+
+    return Object.values(imported).map((m) => m.default);
+  }, [images]);
+
+  // Combine folder images + prop images
+  const finalImages = useMemo(() => {
+    const combined = onlyPropImages ? images : [...folderImages, ...images];
+    return Array.from(new Set(combined));
+  }, [folderImages, images]);
+
+  useEffect(() => {
+    if (finalImages.length === 0) return;
+
+    const id = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % finalImages.length);
+    }, interval);
+
+    return () => clearInterval(id);
+  }, [finalImages, interval]);
+
+  if (finalImages.length === 0) return null;// hide component if no images available
 
   return (
     <div className="carousel-wrapper">
-      {images.map((img, index) => (
+      {finalImages.map((img, index) => (
         <img
           key={index}
           src={img}
