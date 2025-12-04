@@ -112,7 +112,19 @@
   margin-bottom: 0.5rem;
 }
 
-/* Partner tag */
+/* SPEAKERS tag */
+.agenda-speakers{
+ 
+}
+.agenda-speaker {
+  display: inline-block;
+
+  color: #1d4ed8; /* blue-700 */
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+/* Old speaker tag under desc. */
 .agenda-partner {
   display: inline-block;
   background: #eff6ff; /* blue-50 */
