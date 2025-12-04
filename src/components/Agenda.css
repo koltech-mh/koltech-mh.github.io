@@ -114,14 +114,20 @@
 
 /* SPEAKERS tag */
 .agenda-speakers{
- 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .agenda-speaker {
-  display: inline-block;
+  
 
   color: #1d4ed8; /* blue-700 */
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
+
+  margin:0;
+  padding: 0;
+  margin-right: 0.5rem;
 }
 
 /* Old speaker tag under desc. */
