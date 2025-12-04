@@ -8,7 +8,7 @@ export function Location() {
 
         <div className="location-header">
             
-          <h2><MapPin/> Lokacja</h2>
+          <h2><MapPin/> Lokacja Wydarzenia</h2>
 
         </div>
 
@@ -31,15 +31,17 @@ export function Location() {
           <div className="location-info">
             
             <div>
-                <h3>Gdzie</h3>
+                <h3>Gdzie?</h3>
                 <p>
-                    Siedziba firmy Fanuc<br />
-                    Polska, Wrocław, ul. Sakury 2<br />
+                    Polska <br />
+                    Siedziba firmy FANUC<br />
+                    Wrocław, ul. Sakury 2<br />
                 </p>
-                <h3>Jak się dostać</h3>
+                <h3>Jak się dostać?</h3>
                 <p>
-                    • Public Transit: Powell Street BART Station (5 min walk)<br />
-                    • Parking: Available on-site<br />
+                    • Parking: Dostępny na miejscu<br />
+                    • Transport Publiczny: Przystanek XXXX (5 min piechotą)<br />
+                    
                 </p>
                 
             </div>

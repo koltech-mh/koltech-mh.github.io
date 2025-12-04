@@ -8,7 +8,9 @@ export function Hero() {
       <div className="hero-bg">
 
         {/* <img src="..." alt="" className="hero-img" /> */}
-        <div className="hero-overlay"></div>
+
+        <div className="hero-underlay"></div>
+
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0}}>
           <defs>
             <linearGradient id="fade" x1="0" y1="1" x2="1" y2="0">
@@ -17,7 +19,6 @@ export function Hero() {
               <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
             </linearGradient>
           </defs>
-
           <g fill="none" stroke="url(#fade)" stroke-width="2" transform="translate(0, -100)">
             <path d="M0,100 C300,700 700,850 1200,700"/>
             <path d="M0,160 C280,660 720,830 1200,680"/>
@@ -29,9 +30,9 @@ export function Hero() {
             <path d="M0,120 C160,420 840,710 1200,560"/>
             <path d="M0,180 C140,380 860,690 1200,540"/>
           </g>
-
-
         </svg>
+
+        <div className="hero-overlay"></div>
       </div>
 
       {/* Content */}
@@ -53,7 +54,7 @@ export function Hero() {
 
             <div className="hero-info-item">
               <MapPin className="icon" />
-              <span>siedziba firmy FANUC, Wrocław</span>
+              <span>FANUC Polska, Wrocław</span>
             </div>
           </div>
 

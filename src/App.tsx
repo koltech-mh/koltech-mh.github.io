@@ -12,8 +12,7 @@ export default function App() {
     <div>
       <Navigation />
       
-      {/* Add padding to account for fixed navigation */}
-      <div>
+      <div style={{paddingTop: '60px'}}>{/* Offset for fixed nav (paddingTop) */}
         <Hero />
         <About />
         <Agenda />
