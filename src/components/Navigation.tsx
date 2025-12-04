@@ -1,6 +1,8 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import "./Navigation.css";
+import logo from '../assets/img/logo/koltech_ori.png';
+
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,8 +20,9 @@ export function Navigation() {
         <div className="nav-inner">
 
           {/* Logo */}
-          <div className="nav-logo">
-            <h3>Koltech Forum 2025</h3>
+          <div className="nav-logo" onClick={()=>{window.scrollTo(0,0)}}>
+            <img src={logo} alt="KOLTECH" />
+            {/*<h3>Koltech Forum 2025</h3>*/}
           </div>
 
           {/* Desktop Navigation */}
