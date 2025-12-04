@@ -36,7 +36,7 @@ export function About() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <ImageFadeCarousel />
+          <ImageFadeCarousel images={carouselImages} />
 
         </div>
       </div>
