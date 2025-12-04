@@ -2,7 +2,11 @@
 import { Award, Handshake } from 'lucide-react';
 import "./Partners.css";
 
-interface Partner {
+import FanucLogo from "../assets/img/logo/partners/fanuc_logo.png";
+import ZapametLogo from "../assets/img/logo/partners/zapamet_logo.png";
+import DsLogo from "../assets/img/logo/partners/ds_logo_blue.png";
+
+interface Partner { 
   name: string;
   logo: string;
   description: string;
@@ -13,21 +17,21 @@ interface Partner {
 const partners: Partner[] = [
   {
     name: "FANUC",
-    logo: "../assets/img/logo/partners/fanuc_logo.png",
+    logo: FanucLogo,
     description: "Lider automatyzacji przemysłowej. Specjalizuje się w produkcji robotów przemysłowych, systemów CNC oraz technologii automatyzujących procesy produkcyjne.",
     expertise: "Robotyka Przemysłowa",
     link: "https://www.fanuc.eu/pl/pl",
   },
   {
     name: "ZAPAMET",
-    logo: "../assets/img/logo/partners/zapamet_logo.png",
+    logo: ZapametLogo,
     description: "Specjalizuje się w automatyzacji produkcji, robotyce przemysłowej, obróbce metali i produkcji części metalowych.",
     expertise: "Spawalnictwo, Automatyzacja i Robotyka Przemysłowa",
     link: "https://www.zapamet.pl/",
   },
   {
     name: "Dassault Systèmes",
-    logo: "../assets/img/logo/partners/ds_logo_blue.png",
+    logo: DsLogo,
     description: "Światowy lider w dziedzinie projektowania 3D, cyfrowych makiet 3D i rozwiązań PLM. Dostawca platformy 3DEXPERIENCE, która umożliwia firmom zrównoważone innowacje.",
     expertise: "Platforma PLM",
     link: "https://www.3ds.com/",
