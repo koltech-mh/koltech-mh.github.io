@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import "./Navigation.css";
-import logo from '../assets/img/logo/koltech_ori.png';
+import logo from '../assets/img/logo/koltech_logo_original.png';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
