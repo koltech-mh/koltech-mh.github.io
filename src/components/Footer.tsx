@@ -1,10 +1,15 @@
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
 import "./Footer.css";
+import logo from '../assets/img/logo/koltech_logo_white.png';
 
 export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
+
+        <div className='footer-logo'>
+          <img src={logo} onClick={()=>{window.open("https://koltech.com.pl/", "_blank");}} alt="" />
+        </div>
 
         <div className="footer-grid">
 

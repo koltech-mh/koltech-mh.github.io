@@ -130,3 +130,16 @@
   color: #a3a3a3;
   font-size: 0.875rem;
 }
+
+/* LOGO */
+.footer-logo {
+  height: 2rem;
+  width: auto;
+}
+
+.footer-logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
