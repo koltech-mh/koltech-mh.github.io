@@ -26,7 +26,7 @@ const agendaItems: AgendaItem[] = [
   { time: "14:00 - 14:30", title: "Napawanie - demonstracja na żywo", description: "Wisieńka na torcie całego wydarzenia! Wraz z partnerami pokażemy w praktyce regenerację matrycy przy pomocy robota.", speaker: ["KOLTECH", "ZAPAMET", "FANUC"] },
   { time: "14:30 - 15:30", title: "Podsumowanie, Pytania i Odpowiedzi" },
   { time: "14:45 - 15:45", title: "Lunch", description: "Nawiąż kontakt z partnerami i przedstawicielami branży, przy ciepłym posiłku", break: true  },
-  { time: "15:45 - 16:30", title: "Rozmowy W Kuluarach", description: "Spragniony informacji? Jesteśmy tu dla Ciebie! Porozmawiajmy!", break: true  },
+  { time: "15:45 - 16:30", title: "Rozmowy w Kuluarach", description: "Spragniony informacji? Jesteśmy tu dla Ciebie! Porozmawiajmy!", break: true  },
 ];
 
 export function Agenda() {
@@ -57,8 +57,6 @@ export function Agenda() {
                   <div className="agenda-content">
                     <h4 className="agenda-item-title">{item.title}</h4>
                     {item.description && (<p className="agenda-description">{item.description}</p>)}
-
-
                   </div>
 
                   {/* Speaker */}
