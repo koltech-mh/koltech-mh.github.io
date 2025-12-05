@@ -32,7 +32,7 @@ export function Hero() {
           </g>
         </svg>
 
-        <div className="hero-overlay"></div>
+        {/*<div className="hero-overlay"></div>*/}
       </div>
 
       {/* Content */}
