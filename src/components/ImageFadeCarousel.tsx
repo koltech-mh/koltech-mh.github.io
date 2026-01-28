@@ -41,6 +41,10 @@ const ImageFadeCarousel: React.FC<Props> = ({ images = [], onlyPropImages = fals
 
   if (finalImages.length === 0) return null;// hide component if no images available
 
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <div className="carousel-wrapper">
       {finalImages.map((img, index) => (
@@ -51,6 +55,18 @@ const ImageFadeCarousel: React.FC<Props> = ({ images = [], onlyPropImages = fals
           className={`carousel-image ${index === currentIndex ? "active" : ""}`}
         />
       ))}
+
+      {/* Dots Indicator */}
+      <div className="carousel-dots">
+        {finalImages.map((_, index) => (
+          <button
+            key={index}
+            className={`carousel-dot ${index === currentIndex ? "active" : ""}`}
+            onClick={() => handleDotClick(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
 };
