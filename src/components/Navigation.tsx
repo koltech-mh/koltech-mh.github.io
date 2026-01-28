@@ -1,10 +1,34 @@
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import "./Navigation.css";
 import logo from '../assets/img/logo/koltech_logo_original.png';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('about');
+
+  useEffect(() => {
+    // Intersection Observer to detect active section
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            setActiveSection(id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Observe all sections
+    const sections = document.querySelectorAll('[id="about"], [id="agenda"], [id="location"], [id="partners"], [id="registration"]');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
 
   const navLinks = [
     { name: 'O Wydarzeniu', href: '#about' },
@@ -28,7 +52,11 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="nav-links">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="nav-link">
+              <a 
+                key={link.name} 
+                href={link.href} 
+                className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
+              >
                 {link.name}
               </a>
             ))}
@@ -51,7 +79,7 @@ export function Navigation() {
               <a
                 key={link.name}
                 href={link.href}
-                className="nav-mobile-link"
+                className={`nav-mobile-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
