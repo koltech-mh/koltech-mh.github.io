@@ -59,7 +59,7 @@ export function RegistrationForm() {
             <CheckCircle className="reg-success-icon" />
             <h2 className="reg-success-title">Registration Successful!</h2>
             <p className="reg-success-text">
-              Thank you for registering for the PLM Innovation Summit 2025. 
+              Thank you for registering. 
               You will receive a confirmation email shortly with additional details.
             </p>
           </div>

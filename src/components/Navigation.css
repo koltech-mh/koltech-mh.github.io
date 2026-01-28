@@ -64,7 +64,7 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: #4e6db1;
+  background: var(--accent-color);
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -75,11 +75,11 @@
 }
 
 .nav-link.active {
-  color: #4e6db1;
+  color: var(--accent-color);
 }
 
 .nav-link:hover {
-  color: #4e6db1;
+  color: var(--accent-color);
 }
 
 /* Mobile toggle button */

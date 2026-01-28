@@ -33,9 +33,12 @@ export function Location() {
             <div>
                 <h3>Gdzie?</h3>
                 <p>
-                    Polska <br />
                     Siedziba firmy FANUC<br />
-                    Wrocław, ul. Sakury 2<br />
+                    Polska, Wrocław, ul. Sakury 2<br />
+                </p>
+                <h3>Kiedy?</h3>
+                <p>
+                    23.10.2025 od godziny 8:00
                 </p>
                 <h3>Jak się dostać?</h3>
                 <p>
@@ -45,9 +48,7 @@ export function Location() {
                 </p>
                 
             </div>
-
-
-            {/* Directions Button */}
+            {/* Directions Button
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=FANUC+Polska,+Sakury,+Wrocław"
               target="_blank"
@@ -55,8 +56,7 @@ export function Location() {
               className="directions-btn"
             >
               Wskaż Drogę
-            </a>
-
+            </a> */}
           </div>
         </div>
       </div>

@@ -9,6 +9,10 @@ interface AgendaItem {
   break?: boolean;
 }
 
+interface AgendaProps {
+  showSpeakers?: boolean;
+}
+
 const agendaItems: AgendaItem[] = [
   { time: "09:00 - 09:30", title: "Rejestracja & Kawa Powitalna", break: true   },
   { time: "09:30 - 09:40", title: "W trzech słowach o FANUC", speaker: ["FANUC"] },
@@ -23,13 +27,13 @@ const agendaItems: AgendaItem[] = [
   { time: "13:20 - 13:20", title: "Regeneracja matryc metodą napawania", description:"O innowacyjnym, zautomatyzowanym procesie regeneracji matryc w teorii", speaker: ["KOLTECH"] },
   { time: "13:20 - 13:40", title: "Przerwa Kawowa", break: true  },
   { time: "13:40 - 14:00", title: "Showroom Fanuca - proces budowania celi zrobotyzowane", speaker: ["FANUC"]  },
-  { time: "14:00 - 14:30", title: "Napawanie - demonstracja na żywo", description: "Wisieńka na torcie całego wydarzenia! Wraz z partnerami pokażemy w praktyce regenerację matrycy przy pomocy robota.", speaker: ["KOLTECH", "ZAPAMET", "FANUC"] },
+  { time: "14:00 - 14:30", title: "Napawanie - demonstracja na żywo", description: "Wisieńka na torcie całego wydarzenia! Wraz z partnerami pokażemy w praktyce regenerację matrycy przy pomocy robota."},
   { time: "14:30 - 15:30", title: "Podsumowanie, Pytania i Odpowiedzi" },
   { time: "14:45 - 15:45", title: "Lunch", description: "Nawiąż kontakt z partnerami i przedstawicielami branży, przy ciepłym posiłku", break: true  },
   { time: "15:45 - 16:30", title: "Rozmowy w Kuluarach", description: "Spragniony informacji? Jesteśmy tu dla Ciebie! Porozmawiajmy!", break: true  },
 ];
 
-export function Agenda() {
+export function Agenda({ showSpeakers = true }: AgendaProps) {
   return (
     <section className="agenda-section" id="agenda">
       <div className="agenda-container">
@@ -60,7 +64,7 @@ export function Agenda() {
                   </div>
 
                   {/* Speaker */}
-                  {item.speaker && item.speaker.length > 0 && (
+                  {showSpeakers && item.speaker && item.speaker.length > 0 && (
                     <div className="agenda-speakers">
                       {item.speaker.map((spk, index) => (<div key={index} className="agenda-speaker">{spk}</div>))}
                     </div>

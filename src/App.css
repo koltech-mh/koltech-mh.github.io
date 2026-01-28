@@ -1,5 +1,9 @@
 
 
+:root {
+  --accent-color: #11499c; /* #123a77; */
+  --accent-color-light: #5795f1;
+}
 
 /* Background shapes */
 .shape {

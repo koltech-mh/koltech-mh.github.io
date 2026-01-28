@@ -6,6 +6,7 @@ import { Partners } from './components/Partners.tsx';
 import { RegistrationForm } from './components/RegistrationForm.tsx';
 import { Footer } from './components/Footer.tsx';
 import { Location } from './components/Location.tsx';
+import './App.css';
 
 export default function App() {
   return (
