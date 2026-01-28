@@ -22,11 +22,32 @@ export function Navigation() {
     );
 
     // Observe all sections
-    const sections = document.querySelectorAll('[id="about"], [id="agenda"], [id="location"], [id="partners"], [id="registration"]');
+    const sections = document.querySelectorAll('[id="about"], [id="agenda"], [id="location"], [id="partners"], [id="registration"], [id="contact"]');
     sections.forEach((section) => observer.observe(section));
+
+    // Force activation on scroll when near top or bottom
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight;
+      const winHeight = window.innerHeight;
+      const scrollBottom = scrollTop + winHeight;
+
+      console.log(scrollTop);
+      if (scrollTop < 100) {
+        setActiveSection('');
+      }
+      else if (docHeight - scrollBottom < 100) {
+        setActiveSection('contact');
+      }
+    };
+    
+
+    window.addEventListener('scroll', handleScroll);
+    
 
     return () => {
       sections.forEach((section) => observer.unobserve(section));
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -35,7 +56,8 @@ export function Navigation() {
     { name: 'Agenda', href: '#agenda' },
     { name: 'Lokacja', href: '#location' },
     { name: 'Partnerzy', href: '#partners' },
-    { name: 'Rejestracja', href: '#registration' }
+    { name: 'Rejestracja', href: '#registration' },
+    { name: 'Kontakt', href: '#contact' }
   ];
 
   return (

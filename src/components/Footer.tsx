@@ -4,7 +4,7 @@ import logo from '../assets/img/logo/koltech_logo_white.png';
 
 export function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="footer-container">
 
         <div className='footer-logo'>
