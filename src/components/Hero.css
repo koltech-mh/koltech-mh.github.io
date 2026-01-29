@@ -80,7 +80,8 @@
 /* Info row (date + location) */
 .hero-info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  text-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
   align-items: center;

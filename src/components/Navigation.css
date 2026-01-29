@@ -63,7 +63,7 @@
   bottom: 0;
   left: 50%;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: var(--accent-color);
   transition: width 0.3s ease, left 0.3s ease;
 }
@@ -118,7 +118,7 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: var(--accent-color);
   transition: width 0.3s ease;
 }
