@@ -1,7 +1,10 @@
 /* ============================================
    GLOBAL STYLES & SHARED UTILITIES
    ============================================ */
-
+@font-face {
+  font-family: humanist; /* set name */
+  src: url('./assets/fonts/KOLTECH_Humanist.ttf'); /* url of the font */
+}
 /* ROOT VARIABLES */
 :root {
   --accent-color: #11499c;
@@ -42,6 +45,7 @@ html, body {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-family: humanist;
 }
 
 #root {
