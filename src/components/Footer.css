@@ -55,6 +55,7 @@
   display: inline-block;
   width: 20px;
   height: 20px;
+  padding-top: 4px;
 }
 
 .footer-text {
@@ -83,9 +84,9 @@
 }
 
 .footer-social-btn {
-  width: 40px;
-  height: 40px;
-  background: #1f2937; /* gray-800 */
+  width: 3rem;
+  height: 3rem;
+  background: #364355; /* gray-800 */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -142,4 +143,13 @@
   width: auto;
   object-fit: contain;
   cursor: pointer;
+}
+
+.footer-text a{
+  color: #d1d5db;
+  text-decoration: none;
+}
+.footer-text a:hover{
+  color: #ffffff;
+  text-decoration: underline;
 }

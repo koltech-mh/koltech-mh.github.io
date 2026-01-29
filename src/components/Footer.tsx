@@ -32,9 +32,9 @@ export function Footer() {
               <div className="footer-contact-item">
                 <Mail className="footer-icon" />
                 <p className="footer-text">
-                  zsi@koltech.com.pl <br />
-                  plm_support@koltech.com.pl <br />
-                  marketing_zsi@koltech.com.pl
+                  <a href="mailto:zsi@koltech.com.pl">zsi@koltech.com.pl</a> <br />
+                  <a href="mailto:plm_support@koltech.com.pl">plm_support@koltech.com.pl</a> <br />
+                  <a href="mailto:marketing_zsi@koltech.com.pl">marketing_zsi@koltech.com.pl</a>
                 </p>
               </div>
 
