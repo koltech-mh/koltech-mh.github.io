@@ -109,4 +109,9 @@
   border-radius: var(--radius-sm);
   text-decoration: none;
   transition: background var(--transition);
+  font-weight: 600;
+}
+
+.hero-button:hover {
+  background: var(--accent-color-light);
 }
