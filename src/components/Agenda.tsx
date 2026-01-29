@@ -11,6 +11,7 @@ interface AgendaItem {
 
 interface AgendaProps {
   showSpeakers?: boolean;
+  showLabels?: boolean;
 }
 
 const agendaItems: AgendaItem[] = [
@@ -33,7 +34,7 @@ const agendaItems: AgendaItem[] = [
   { time: "15:45 - 16:30", title: "Rozmowy w Kuluarach", description: "Spragniony informacji? Jesteśmy tu dla Ciebie! Porozmawiajmy!", break: true  },
 ];
 
-export function Agenda({ showSpeakers = true }: AgendaProps) {
+export function Agenda({ showSpeakers = true, showLabels = false }: AgendaProps) {
   return (
     <section className="agenda-section" id="agenda">
       <div className="agenda-container">
@@ -47,6 +48,17 @@ export function Agenda({ showSpeakers = true }: AgendaProps) {
 
         <div className="agenda-list-wrapper">
           <div className="agenda-list">
+            
+            {showLabels &&
+              <div className="agenda-card agenda-card-break agenda-labels"> 
+                <div className="agenda-card-inner">
+                  <div className="agenda-time">Czas</div> 
+                  <div className="agenda-content">Tytuł</div> 
+                  <div className="agenda-speaker">Prowadzący</div> 
+                </div>
+            </div>
+            } 
+
             {agendaItems.map((item, index) => (
               <div key={index} className={item.break?"agenda-card agenda-card-break":"agenda-card"}>
                 <div className="agenda-card-inner">
