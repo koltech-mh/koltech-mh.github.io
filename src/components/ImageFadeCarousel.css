@@ -5,8 +5,8 @@
   height: 510px;
   margin: auto;
   overflow: hidden;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
 }
 
 .carousel-image {

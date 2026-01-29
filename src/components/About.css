@@ -31,7 +31,7 @@
 
 .about-text {
   margin-bottom: 1.5rem;
-  color: #374151; /* gray-700 */
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -48,8 +48,6 @@
   }
 }
 
-
-
 /* IMAGE (if used) */
 .about-image-wrapper {
   position: relative;
@@ -57,6 +55,6 @@
 
 .about-image {
   width: 100%;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
 }

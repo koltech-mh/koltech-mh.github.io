@@ -1,7 +1,6 @@
 /* Section background */
 .reg-section {
   padding: 5rem 0;
-  background: linear-gradient(to bottom right, #e4f0ff, #cbcdf5);
   background: rgb(237, 238, 243);
 }
 
@@ -29,16 +28,15 @@
 }
 
 .reg-subtitle {
-  color: #4b5563;
+  color: var(--text-secondary);
 }
 
 /* Form */
 .reg-form {
   background: white;
   padding: 2rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
 }
 
 .reg-grid {
@@ -48,7 +46,6 @@
   margin-bottom: 1.5rem;
   margin-right: 1rem;
 }
-
 
 @media (min-width: 640px) {
   .reg-grid {
@@ -64,26 +61,26 @@
 .reg-label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #374151;
+  color: var(--text-primary);
   font-weight: 500;
 }
 
 .reg-input {
-  width: 100%;;
+  width: 100%;
   padding: 0.75rem 1rem;
   padding-right: 0rem;
-  border-radius: 0.5rem;
-  border: 1px solid #d1d5db;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color var(--transition), box-shadow var(--transition);
   background: rgba(0,0,0,0.05);
   color: rgb(44, 44, 44);
 }
 
 .reg-input:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.4);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(17, 73, 156, 0.1);
 }
 
 /* Interest checkboxes */
@@ -98,7 +95,7 @@
   align-items: center;
   gap: 0.75rem;
   cursor: pointer;
-  color: #374151;
+  color: var(--text-primary);
 }
 
 .reg-checkbox {
@@ -109,10 +106,10 @@
 /* Button */
 .reg-button {
   width: 100%;
-  background: #2563eb;
+  background: var(--accent-color);
   color: white;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   border: none;
   font-size: 1rem;
   display: flex;
@@ -120,11 +117,11 @@
   align-items: center;
   gap: 0.75rem;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background var(--transition);
 }
 
 .reg-button:hover {
-  background: #1d4ed8;
+  background: #0d3a7a;
 }
 
 .reg-button-icon {
@@ -137,18 +134,18 @@
   text-align: center;
   margin-top: 1rem;
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--text-muted);
 }
 
 /* Success State */
 .reg-success-card {
   background: white;
   padding: 3rem;
-  border-radius: 0.75rem;
+  border-radius: var(--radius-md);
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .reg-success-icon {
@@ -164,11 +161,5 @@
 }
 
 .reg-success-text {
-  color: #374151;
-}
-
-
-.reg-section input {
-
- 
+  color: var(--text-primary);
 }
