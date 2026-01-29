@@ -2,6 +2,7 @@
 .reg-section {
   padding: 5rem 0;
   background: rgb(237, 238, 243);
+  background: var(--bg-light);
 }
 
 /* Container */
