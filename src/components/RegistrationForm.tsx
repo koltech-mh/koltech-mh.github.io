@@ -16,11 +16,11 @@ export function RegistrationForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const interestOptions = [
-    '3DEXPERIENCE Platform',
-    'Digital Twin & Simulation',
-    'Collaborative Design',
-    'Smart Manufacturing',
-    'Data Management'
+    'Platforma 3DEXPERIENCE',
+    'Cyfrowy bliźniak i symulacja',
+    'Projektowanie zespołowe',
+    'Inteligentna produkcja',
+    'Zarządzanie danymi'
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -57,10 +57,10 @@ export function RegistrationForm() {
         <div className="reg-container">
           <div className="reg-success-card">
             <CheckCircle className="reg-success-icon" />
-            <h2 className="reg-success-title">Registration Successful!</h2>
+            <h2 className="reg-success-title">Rejestracja zakończona sukcesem!</h2>
             <p className="reg-success-text">
-              Thank you for registering. 
-              You will receive a confirmation email shortly with additional details.
+              Dziękujemy za rejestrację.
+              Wkrótce otrzymasz e-mail potwierdzający z dodatkowymi szczegółami.
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export function RegistrationForm() {
                   value={formData.firstName}
                   onChange={(e) => setFormData({...formData, firstName: e.target.value})}
                   className="reg-input"
-                  placeholder="John"
+                  placeholder="Jan"
                 />
               </div>
 
@@ -103,13 +103,13 @@ export function RegistrationForm() {
                   value={formData.lastName}
                   onChange={(e) => setFormData({...formData, lastName: e.target.value})}
                   className="reg-input"
-                  placeholder="Doe"
+                  placeholder="Kowalski"
                 />
               </div>
             </div>
 
             <div className="reg-field">
-              <label htmlFor="email" className="reg-label">Email Address *</label>
+              <label htmlFor="email" className="reg-label">Adres e-mail *</label>
               <input
                 type="email"
                 id="email"
@@ -117,13 +117,13 @@ export function RegistrationForm() {
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                 className="reg-input"
-                placeholder="john.doe@company.com"
+                placeholder="jan.kowalski@firma.pl"
               />
             </div>
 
             <div className="reg-grid">
               <div>
-                <label htmlFor="company" className="reg-label">Company *</label>
+                <label htmlFor="company" className="reg-label">Firma *</label>
                 <input
                   type="text"
                   id="company"
@@ -131,12 +131,12 @@ export function RegistrationForm() {
                   value={formData.company}
                   onChange={(e) => setFormData({...formData, company: e.target.value})}
                   className="reg-input"
-                  placeholder="Your Company"
+                  placeholder="Twoja firma"
                 />
               </div>
 
               <div>
-                <label htmlFor="jobTitle" className="reg-label">Job Title *</label>
+                <label htmlFor="jobTitle" className="reg-label">Stanowisko *</label>
                 <input
                   type="text"
                   id="jobTitle"
@@ -144,25 +144,25 @@ export function RegistrationForm() {
                   value={formData.jobTitle}
                   onChange={(e) => setFormData({...formData, jobTitle: e.target.value})}
                   className="reg-input"
-                  placeholder="Product Manager"
+                  placeholder="Kierownik produktu"
                 />
               </div>
             </div>
 
             <div className="reg-field">
-              <label htmlFor="phone" className="reg-label">Phone Number</label>
+              <label htmlFor="phone" className="reg-label">Numer telefonu</label>
               <input
                 type="tel"
                 id="phone"
                 value={formData.phone}
                 onChange={(e) => setFormData({...formData, phone: e.target.value})}
                 className="reg-input"
-                placeholder="+1 (555) 123-4567"
+                placeholder="+48 123 456 789"
               />
             </div>
 
             <div className="reg-field">
-              <label className="reg-label">Topics of Interest</label>
+              <label className="reg-label">Obszary zainteresowań</label>
               <div className="reg-interest-list">
                 {interestOptions.map((interest) => (
                   <label key={interest} className="reg-interest-item">
@@ -180,10 +180,10 @@ export function RegistrationForm() {
 
             <button type="submit" className="reg-button">
               <Send className="reg-button-icon" />
-              Complete Registration
+              Zarejestruj się
             </button>
 
-            <p className="reg-required-note">* Required fields</p>
+            <p className="reg-required-note">* Pola obowiązkowe</p>
           </form>
 
         </div>
