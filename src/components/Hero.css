@@ -30,9 +30,13 @@
   background: linear-gradient(
     to right,
     rgba(15, 39, 99, 1),
-    rgb(23, 91, 155)
+    rgb(23, 91, 155) 80%
   );
+
 }
+
+
+
 
 /* Overlay gradient */
 .hero-overlay {
@@ -118,3 +122,8 @@
 .hero-button:hover {
   background: var(--accent-color-light);
 }
+
+
+
+
+

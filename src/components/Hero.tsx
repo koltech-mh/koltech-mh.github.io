@@ -30,18 +30,18 @@ export function Hero() {
           </defs>
           
           {/* Large flowing curves */}
-          <path d="M0,600 Q300,400 600,500 T1200,450" stroke="url(#grad1)" strokeWidth="3" fill="none" />
-          <path transform="translate(0, -50)" d="M0,700 Q400,500 800,650 T1200,600" stroke="url(#grad2)" strokeWidth="2" fill="none" filter="url(#blur)"/>
+          <path className='flow flow-medium' d="M0,600 Q300,400 600,500 T1200,450" stroke="url(#grad1)" strokeWidth="3" fill="none" />
+          <path className='flow flow-medium' transform="translate(0, -50)" d="M0,700 Q400,500 800,650 T1200,600" stroke="url(#grad2)" strokeWidth="2" fill="none" filter="url(#blur)"/>
           
           {/* Accent diagonal lines */}
-          <line x1="0" y1="200" x2="1200" y2="400" stroke="url(#grad1)" strokeWidth="1.5" opacity="0.5" filter="url(#blur)"/>
-          <line x1="0" y1="100" x2="1200" y2="300" stroke="url(#grad2)" strokeWidth="1" opacity="0.4"/>
+          <line className='flow flow-medium' x1="0" y1="200" x2="1200" y2="400" stroke="url(#grad1)" strokeWidth="1.5" opacity="0.5" filter="url(#blur)"/>
+          <line className='flow flow-medium' x1="0" y1="100" x2="1200" y2="300" stroke="url(#grad2)" strokeWidth="1" opacity="0.4"/>
           
           {/* Organic curved strokes */}
-          <path transform="translate(0, 30)" d="M1200,150 Q900,300 600,200 Q300,100 0,280" stroke="url(#grad1)" strokeWidth="2.5" fill="none" opacity="0.6" filter="url(#blurLight)"/>
+          <path className='flow flow-medium' transform="translate(0, 30)" d="M1200,150 Q900,300 600,200 Q300,100 0,280" stroke="url(#grad1)" strokeWidth="2.5" fill="none" opacity="0.6" filter="url(#blurLight)"/>
           
           {/* Bottom accent wave */}
-          <path d="M0,750 Q300,650 600,720 Q900,790 1200,700" stroke="url(#grad2)" strokeWidth="2" fill="none" opacity="0.7"/>
+          <path className='flow flow-medium' d="M0,750 Q300,650 600,720 Q900,790 1200,700" stroke="url(#grad2)" strokeWidth="2" fill="none" opacity="0.7"/>
         </svg>
 
         {/*<div className="hero-overlay"></div>*/}
