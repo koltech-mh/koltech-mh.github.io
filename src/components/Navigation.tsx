@@ -32,7 +32,6 @@ export function Navigation() {
       const winHeight = window.innerHeight;
       const scrollBottom = scrollTop + winHeight;
 
-      console.log(scrollTop);
       if (scrollTop < 100) {
         setActiveSection('');
       }
