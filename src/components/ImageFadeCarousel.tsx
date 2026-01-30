@@ -6,7 +6,7 @@ interface Props {
   onlyPropImages?: boolean;
   interval?: number;
 }
-// You can set images directly via props or let the component load all images from the folder.
+// You can set images directly via props or let the component load all images from the folder. The folder has to be hardcoded below.
 const ImageFadeCarousel: React.FC<Props> = ({ images = [], onlyPropImages = false, interval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 

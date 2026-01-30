@@ -1,13 +1,13 @@
-//import { Lightbulb, Users, TrendingUp } from 'lucide-react';
 import "./About.css";
 import ImageFadeCarousel from "./ImageFadeCarousel.tsx";
 
 export function About() {
-  
+  /*  
   const carouselImages = [
     "https://lh3.googleusercontent.com/p/AF1QipMioeeQKzmKagGRVyEnj0clFD2Qc-8xKC1DBMz3=s680-w680-h510",
     "https://d16ohktstcjvly.cloudfront.net/image/513891251684/image_o8jat0e2ch6undk9vt2dsi286f/-FJPG",
   ];
+  */
 
   return (
     <section className="about-section" id="about">
@@ -36,7 +36,11 @@ export function About() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <ImageFadeCarousel images={carouselImages} onlyPropImages />
+          {/* You can set specific images by passing an array of image URLs as a prop, 
+              or let the carousel load images from the /assets/about_img_carousel folder
+          <ImageFadeCarousel images={carouselImages} onlyPropImages /> 
+          */}
+          <ImageFadeCarousel />
 
         </div>
       </div>
